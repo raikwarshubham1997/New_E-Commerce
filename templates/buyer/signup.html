@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+     <style>
+        form{
+            margin: auto;
+            width: 35%;
+            border: 1px solid;
+            padding: 20px;
+            margin-top: 100px;
+            margin-bottom: 100px;
+            border-radius: 10px;
+
+        }
+        input:hover{
+            border-color: aqua;
+        }
+     </style>
+</head>
+<body style="background-image: url('https://thumbs.dreamstime.com/b/crumpled-old-paper-background-texture-crumpled-old-brown-paper-background-texture-155554006.jpg');">
+    <form method="post">
+        {% csrf_token %}
+        <h2 style="text-align: center;">Create User Account</h2>
+        <hr>
+        {% if messages %}
+        {% for message in messages %}
+           <p style="background-color: #FAF8F5;padding: 10px;font-size: 15px;color: rgb(48, 197, 48);border-radius: 10px;">{{ message }}</p>
+            {% endfor %}</ul>
+        {% endif %}
+        <div class="mb-3">
+            <label for="exampleInputfname" class="form-label">First Name</label>
+            <input type="text" class="form-control" name="fname" id="exampleInputfname" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleInputlname" class="form-label">Last Name</label>
+            <input type="text" class="form-control" name="lname" id="exampleInputlname" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" name="email" id="exampleInputEmail1" required aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleInputusername" class="form-label">Username</label>
+            <input type="text" class="form-control" name="uname" id="exampleInputusername" required>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" name="password" id="exampleInputPassword1" required>
+          </div>
+          
+          <!-- <div class="mb-3">
+          <label class="container" class="lab">Select Your Role</label>
+          </div>
+          <label class="container">Admin
+            <input type="checkbox" name="role" value="admin">
+            <span class="checkmark"></span>
+            </label>
+            <label class="container">User
+            <input type="checkbox" name="role" value="user">
+            <span class="checkmark"></span>
+            </label>
+            <label class="container">Saller
+              <input type="checkbox" name="role" value="saller">
+              <span class="checkmark"></span>
+              </label> -->
+           
+
+        <button type="submit" class="btn btn-primary col-md-12">SignUp</button><br><br>
+       
+        <!-- <p style="padding-top: 10px;">
+        If you have already Account <a href="login/">Login Here</a>
+        </p> -->
+      
+      </form>
+</body>
+</html>

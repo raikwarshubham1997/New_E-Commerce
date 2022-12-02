@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <style>
+    header {
+    height: 650px;
+    width: 100%;
+    text-align: center;
+    padding-top: 150px;
+    color: white;
+    overflow: hidden;
+    background: #C04848;  /* fallback for old browsers */
+    background: linear-gradient(rgba(156, 35, 156, 0.8), rgb(192,72,72,0.8)), url("https://ik.imagekit.io/ikmedia/blog/hero-image.jpeg");  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(rgba(156, 35, 156, 0.8), rgb(192,72,72,0.8)), url("https://ik.imagekit.io/ikmedia/blog/hero-image.jpeg"); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+    </style>
+</head>
+<body style="background-image: url({https://ik.imagekit.io/ikmedia/blog/hero-image.jpeg);">
+
+    <header>
+        <section class='hero-header'>
+            <h1>Welcome! to Our Buy Fashion Application</h1>
+            <h3>Please Register / Login your self</h3>
+            <br><br>
+            <a href="/useraccount/register/"><button class="btn btn-primary col-md-2">User Account</button></a>
+            <a href="/business/registers/"><button class="btn btn-primary col-md-2">Business Account</button></a>
+           
+            
+            <hr  style="margin: center;">
+            <section class='hero-header'>
+                <a href="login/"><button class="btn btn-success col-md-3">Login</button></a>
+            </section>
+        </section>
+    </header>
+
+</body>
+</html>
